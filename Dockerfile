@@ -26,11 +26,9 @@ RUN echo "sendmail_path=sendmail -t" > /usr/local/etc/php/conf.d/php-sendmail.in
 RUN mkdir -p /etc/apache2/site-config \
     && mkdir -p /etc/apache2/saml
 
-ADD config/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 ADD config/mellon.conf /etc/apache2/site-config/mellon.conf
 ADD config/ldap.conf /etc/apache2/site-config/ldap.conf
 ADD config/htpasswd.conf /etc/apache2/site-config/htpasswd.conf
-
 ADD config/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 ADD config/mellon_create_metadata.sh /opt/mellon_create_metadata.sh
