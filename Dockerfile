@@ -7,14 +7,13 @@ RUN a2enmod headers \
     && sed -i "s/#Header set X/Header set X/" /etc/apache2/conf-available/security.conf \
     && sed -i "s/Options Indexes FollowSymLinks/Options -Indexes/" /etc/apache2/apache2.conf
 
-# System Dependencies.
+# System Dependencies. No ssmtp in buster
 RUN apt-get update && apt-get install -y \
 		libapache2-mod-auth-mellon \
 		liblasso3 \
 		libxmlsec1 \
 		libxmlsec1-openssl \
 		libxslt1.1 \
-		ssmtp \
 	--no-install-recommends && rm -r /var/lib/apt/lists/*
 
 RUN a2enmod auth_mellon \
