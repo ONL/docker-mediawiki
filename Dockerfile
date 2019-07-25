@@ -41,6 +41,7 @@ ADD extensions/Kartographer.tar.gz /var/www/html/extensions/
 ADD extensions/PluggableAuth.tar.gz /var/www/html/extensions/
 ADD extensions/YouTube.tar.gz /var/www/html/extensions/
 ADD extensions/Auth_remoteuser.tar.gz /var/www/html/extensions/
+ADD extensions/JsonConfig.tar.gz /var/www/html/extensions/
 
 WORKDIR /var/www/html
 
