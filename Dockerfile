@@ -1,4 +1,4 @@
-FROM mediawiki:1.33
+FROM mediawiki:1.34
 
 # Hardening
 RUN a2enmod headers \
